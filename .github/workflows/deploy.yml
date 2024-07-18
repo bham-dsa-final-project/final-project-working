@@ -120,6 +120,13 @@ jobs:
         with:
           terraform_version: 1.1.7
 
+      - name: Terraform Init
+        working-directory: ./
+        run: terraform init -reconfigure
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
       - name: Terraform Destroy
         working-directory: ./
         run: terraform destroy -auto-approve
