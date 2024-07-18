@@ -18,10 +18,11 @@ jobs:
         with:
           terraform_version: 1.1.7
 
-      - name: Terraform Init and Apply for S3 and DynamoDB
+      - name: Initialize S3 and DynamoDB for Backend
         run: |
-          terraform init
-          terraform apply -target=aws_s3_bucket.terraform_state -target=aws_s3_bucket_versioning.terraform_state_versioning -target=aws_dynamodb_table.terraform_locks -auto-approve
+          terraform init -backend=false
+          terraform apply -auto-approve
+        working-directory: ./init
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -67,9 +68,13 @@ jobs:
           terraform_version: 1.1.7
 
       - name: Terraform Init
-        run: |
-          terraform init
-          terraform apply -auto-approve
+        run: terraform init
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: Terraform Apply
+        run: terraform apply -auto-approve
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -114,8 +119,7 @@ jobs:
           terraform_version: 1.1.7
 
       - name: Terraform Destroy
-        run: |
-          terraform destroy -auto-approve
+        run: terraform destroy -auto-approve
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
