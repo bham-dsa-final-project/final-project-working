@@ -14,52 +14,52 @@ variable "key_name" {
 
 
 
-# RDS VAR
+# # RDS VAR
 
-variable "allocated_storage" {
-  description = "Allocated storage size RDS"
-  type        = number
-  default     = 10
-}
+# variable "allocated_storage" {
+#   description = "Allocated storage size RDS"
+#   type        = number
+#   default     = 10
+# }
 
-variable "engine" {
-  description = "Database Engine"
-  type        = string
-  default     = "mysql"
-}
+# variable "engine" {
+#   description = "Database Engine"
+#   type        = string
+#   default     = "mysql"
+# }
 
-variable "engine_version" {
-  description = "Database engine version"
-  type        = string
-  default     = "8.0.35"
-}
+# variable "engine_version" {
+#   description = "Database engine version"
+#   type        = string
+#   default     = "8.0.35"
+# }
 
-variable "instance_class" {
-  description = "Database instance class or type"
-  type        = string
-  default     = "db.t3.micro"
-}
+# variable "instance_class" {
+#   description = "Database instance class or type"
+#   type        = string
+#   default     = "db.t3.micro"
+# }
 
-variable "identifier" {
-  description = "Name of RDS Instance"
-  type        = string
-  default     = "mysql-dev"
-}
+# variable "identifier" {
+#   description = "Name of RDS Instance"
+#   type        = string
+#   default     = "mysql-dev"
+# }
 
-variable "username" {
-  description = "Database username"
-  type        = string
-  default     = "admin"
-}
+# variable "username" {
+#   description = "Database username"
+#   type        = string
+#   default     = "admin"
+# }
 
-variable "password" {
-  description = "Database Password"
-  type        = string
-  default     = "Abc65871234"
-}
+# variable "password" {
+#   description = "Database Password"
+#   type        = string
+#   default     = "Abc65871234"
+# }
 
-variable "skip_final_snapshot" {
-  description = "Skip final Snapshot"
-  type        = bool
-  default     = true #This is good when you are working in development environment, adjust as per your need.
-}
+# variable "skip_final_snapshot" {
+#   description = "Skip final Snapshot"
+#   type        = bool
+#   default     = true #This is good when you are working in development environment, adjust as per your need.
+# }

@@ -1,0 +1,230 @@
+body{
+    background-color: #fdf7ea;
+    font-family:Helvetica;
+}
+
+.widget-box {
+	height: 250px;
+	background-color: #052831;
+	border-radius: 15px;
+	border: 2px solid #00c6c2;
+}
+
+select#employee-select, #fame-employee-select {
+    border-radius: 2px;
+    padding: 0;
+    height: 24px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#callout-formgroup {
+	margin-bottom: 0.25rem;
+}
+
+#fame-formgroup {
+	margin-bottom: 0;
+}
+
+#fameteam, #calloutteam {
+	display: none;
+}
+
+.cbox {
+	color: #00c6c2;
+
+	border-radius: 10px;
+	padding: 5px 0;
+}
+
+.famename {
+    left: 35px;
+	top: 10px;
+    font-style: italic;
+}
+
+.famedate{
+    right: 35px;
+	top: 10px;
+    font-style: italic;
+}
+
+.logobox {
+	width: 80%;
+	height: 80px;
+	overflow: hidden;
+}
+
+.logo {
+	width: 300px;
+	margin-top: -35px;
+	height: fit-content;
+}
+
+.commenttrigger {
+    right: 15px;
+    font-style: italic;
+}
+
+.defaultnone {
+	display: none;
+	background-color: #052831;
+	border-radius: 10px;
+	color: white;
+	padding: 10px 0;
+}
+
+.viewcomments {
+	text-align: right;
+	margin-right: 10px;
+	font-style: italic;
+	font-size: 12px;
+}
+.viewcomments:hover {
+	color: white;
+	cursor: pointer;
+}
+
+.like-button {
+	background-color: white;
+	color: #052831;
+	border: 1px solid darkgreen;
+	border-radius: 5px;
+}
+
+.like-button:hover {
+	background-color:#052831;
+	color: white;
+}
+
+#choice {
+	margin: 5px 0;
+}
+
+.mainfeed {
+	max-height: 570px;
+	overflow: hidden;
+	padding-right: 8px;
+
+	padding-left:0.5rem;
+	border-radius:15px;
+}
+.mainfeed:hover {
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.mainfeed img{
+}
+
+.alltalentbox {
+	border: 1px solid turquoise;
+	border-radius: 10px;
+}
+
+#listinput {
+	cursor: pointer;
+}
+
+.fbox {
+	padding: 5px 0;
+}
+
+.talent-box {
+	height: 350px !important;
+}
+
+.text-right{
+	font-style: italic;
+}
+
+input, .alert-success, .smalltext {
+	font-size: 12px;
+}
+
+input[type="submit"], input[type="reset"] {
+	cursor: pointer;
+}
+
+/* Remove up and down arrows from number inputs */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+-moz-appearance: textfield;
+}
+
+.smallimp-box {
+	height: 350px !important;
+	color: white;
+}
+
+.fakelink:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+a.cbox.px-2:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.post {
+	border-radius: 10px;
+	overflow: hidden;
+}
+.cpost {
+	background-color: #00c6c2;
+	color: #052831;
+}
+
+.bg-dark{
+    background-color:#052831  !important;
+}
+
+#vlogo{
+    width:90px;
+    margin-top:2px;
+	background-color: rgb(255,255,255,0.6);
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+#postlogo img {
+    height: 25px;
+    width: auto;
+}
+#postlogo{
+    background-color:#052831;
+}
+
+#postlogo2 img {
+    height: 25px;
+    width: auto;
+}
+#postlogo2{
+    background-color:#052831;
+}
+
+.widgetlogo img{
+    height:50px;
+    width:auto;
+}
+
+hr{
+    border:1px solid #052831;
+}
+
+.borderfix{
+    border-bottom: 2px solid  #052831;
+    margin-top:0px;
+}
+
+.font-italic {
+    font-style: italic;
+}

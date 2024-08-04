@@ -1,9 +1,9 @@
-# Use the official MySQL image
-FROM mysql:latest
+# # Use the official MySQL image
+# FROM mysql:latest
 
-# Copy the SQL dump file
-COPY JavaFiles/sql-file.sql /docker-entrypoint-initdb.d/
+# # Copy the SQL dump file
+# COPY JavaFiles/sql-file.sql /docker-entrypoint-initdb.d/
 
-# Set environment variables for MySQL
-ENV MYSQL_ROOT_PASSWORD=rootpassword
-ENV MYSQL_DATABASE=mydatabase
+# # Set environment variables for MySQL
+# ENV MYSQL_ROOT_PASSWORD=rootpassword
+# ENV MYSQL_DATABASE=mydatabase
